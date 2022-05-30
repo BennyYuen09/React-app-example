@@ -1,9 +1,12 @@
+import { Button } from "antd";
+
 const Adder = ({add}) => {
   return (
     <>
-      <button onClick={add}>add</button>
+      <Button onClick={add}>add</Button>
     </>
   );
 };
 
 export default Adder;
+

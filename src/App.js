@@ -1,12 +1,13 @@
-import LandingPage from './pages/LandingPage';
+import Rroutes from './services/routes';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <LandingPage />
+      <Rroutes />
     </div>
   );
 }
 
 export default App;
+

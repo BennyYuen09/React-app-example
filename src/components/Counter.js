@@ -1,21 +1,15 @@
-import { useState, useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { increment } from "../reducers/countSlice";
 import Adder from "./Adder";
 
 const Counter = () => {
-  const [count, setCount] = useState(0);
-  
-  const addAction = () => {
-    setCount(count + 1);
-  };
-
-  useEffect(() => {
-    alert(`The current count value is ${count}`);
-  }, [count]);
+  const dispatch = useDispatch();
+  const count = useSelector(state => state.count.value);
 
   return (
     <>
       <p>Current Count: {count}</p>
-      <Adder add={addAction} />
+      <Adder add={() => dispatch(increment())} />
     </>
   );
 };

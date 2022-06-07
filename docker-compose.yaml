@@ -15,3 +15,4 @@ services:
           memory: 250M
     volumes:
       - ./dist:/usr/share/nginx/html
+
